@@ -51,7 +51,6 @@ export class PostDataComponent implements OnInit {
         this.commentText="";
       });
 
-      console.log(this.post.comments)
       }
   }
 

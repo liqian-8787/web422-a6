@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PostService } from '../post.service';
 import { BlogPost } from '../BlogPost';
 import { Router, ActivatedRoute} from '@angular/router';
+import { NgForm } from "@angular/forms";
 
 @Component({
   selector: 'app-edit-post',
@@ -23,15 +24,15 @@ export class EditPostComponent implements OnInit {
 
  }
 
-  formSubmit(){
+  formSubmit(f:NgForm):void{
     this.tags.split(",").map(tag => tag.trim());
-    this.data.updatePostById(this.blogPost._id,this.blogPost);
+    this.data.updatePostById(this.blogPost._id,this.blogPost).subscribe();;
     this.route.navigate(['admin']);
 
   }
 
-  deltePost(){
-    this.data.deletePostById(this.blogPost._id);
+  deletePost(){
+    this.data.deletePostById(this.blogPost._id).subscribe();
     this.route.navigate(['admin']);
   }
 }
