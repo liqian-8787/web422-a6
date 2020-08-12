@@ -1,0 +1,11 @@
+.post-tags > a {
+  display: inline-block;
+  padding: 5px 25px;
+  font-size: 0.75em;
+  color: #777;
+  font-weight: 600;
+  border: 1px solid #ddd;
+  margin: 5px 5px;
+  border-radius: 50px;
+  text-transform: uppercase;
+}
