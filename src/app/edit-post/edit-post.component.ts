@@ -25,14 +25,18 @@ export class EditPostComponent implements OnInit {
  }
 
   formSubmit(f:NgForm):void{
-    this.tags.split(",").map(tag => tag.trim());
-    this.data.updatePostById(this.blogPost._id,this.blogPost).subscribe();;
-    this.route.navigate(['admin']);
+    this.blogPost.tags = this.tags.split(",").map(tag => tag.trim());
+    this.data.updatePostById(this.blogPost._id,this.blogPost).subscribe(()=>{
+      this.route.navigate(['admin']);
+    });
+
 
   }
 
   deletePost(){
-    this.data.deletePostById(this.blogPost._id).subscribe();
-    this.route.navigate(['admin']);
+    this.data.deletePostById(this.blogPost._id).subscribe(()=>{
+      this.route.navigate(['admin']);
+    });
+
   }
 }

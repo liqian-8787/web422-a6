@@ -2,7 +2,7 @@
 <div class="container">
   <div class="row">
   <div class="col-md-12">
-  <form #f='ngForm' (ngSubmit)='formSubmit(f)' >
+  <form #f='ngForm'  >
   <div class="form-group">
   <label>Title</label>
   <input type="text" class="form-control" name="title" [(ngModel)]="blogPost.title">
@@ -21,7 +21,7 @@
   </div>
   <div class="form-group">
   <label>Tags</label>
-  <textarea class="form-control" name="tag" [(ngModel)]="blogPost.tags"></textarea>
+  <textarea class="form-control" name="tag" [(ngModel)]="tags"></textarea>
   </div>
 
   <div class="pull-right">

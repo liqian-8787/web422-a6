@@ -10,7 +10,7 @@ import { NgForm } from "@angular/forms";
   styleUrls: ['./post-data.component.css']
 })
 export class PostDataComponent implements OnInit {
-  post: BlogPost;
+  post: BlogPost={};
   querySub:any;
   commentName: string;
   commentText: string;
