@@ -18,7 +18,7 @@ import { Router, NavigationEnd } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-    title = 'web422-a5';
+    title = 'web422-a6';
     constructor(private router: Router) { }
 
     ngOnInit() {
